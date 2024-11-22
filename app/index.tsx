@@ -1,20 +1,15 @@
-import { Text, View } from "react-native";
-
+import Pergunta from '@/components/questionario/Pergunta'
+import Logo from '@/components/template/Logo'
+import Pagina from '@/components/template/Pagina'
+import perguntas from '@/data/constants/perguntas'
+import { View } from 'react-native'
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text style={{fontFamily:'SOLARSPACEDEMO-Regular', fontSize: 30}}>Hello</Text>
-      <Text style={{fontFamily:'SPACEMISSION-Regular', fontSize: 30}}>Hello</Text>
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
-  );
+    <Pagina>
+      <View style ={{gap:20}}>
+      <Logo />
+      <Pergunta pergunta={perguntas[0]} />
+      </View>
+    </Pagina>
+  )
 }
-
-
-
